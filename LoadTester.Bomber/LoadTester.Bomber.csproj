@@ -1,0 +1,33 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <OutputType>Exe</OutputType>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Update="appsettings.json">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="NBomberConfig.json">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="NBomber" Version="4.1.2" />
+    <PackageReference Include="NBomber.Contracts" Version="4.1.1" />
+    <PackageReference Include="NServiceBus.Persistence.Sql" Version="7.0.1" />
+    <PackageReference Include="NServiceBus.SqlServer" Version="7.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="6.0.1" />
+    <PackageReference Include="Microsoft.Extensions.Hosting.Abstractions" Version="6.0.0" />
+    <PackageReference Include="NServiceBus.Extensions.Hosting" Version="2.0.0" />
+    <PackageReference Include="Microsoft.Data.SqlClient" Version="1.*" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\LoadTester.Shared\LoadTester.Shared.csproj" />
+  </ItemGroup>
+
+</Project>
