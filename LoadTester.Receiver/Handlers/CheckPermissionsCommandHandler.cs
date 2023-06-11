@@ -20,7 +20,7 @@ namespace Receiver.Handlers
 
         public async Task Handle(CheckPermissionsCommand message, IMessageHandlerContext context)
         {
-            _logger.LogInformation($"[{DateTime.Now}] Handling {nameof(CheckPermissionsCommandHadnler)}");
+            _logger.LogInformation($"[{DateTime.Now:HH:mm:ss}] Handling {nameof(CheckPermissionsCommandHadnler)}");
 
             int highestDuration = int.Parse(_configuration["ControlParameters:CheckPermissions:HighestDuration"]);
             int lowestDuration = int.Parse(_configuration["ControlParameters:CheckPermissions:LowestDuration"]);

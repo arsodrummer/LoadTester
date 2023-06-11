@@ -20,7 +20,7 @@ namespace Receiver.Handlers
 
         public async Task Handle(CheckBalanceCommand message, IMessageHandlerContext context)
         {
-            _logger.LogInformation($"[{DateTime.Now}] Handling {nameof(CheckBalanceCommandHandler)}");
+            _logger.LogInformation($"[{DateTime.Now:HH:mm:ss}] Handling {nameof(CheckBalanceCommandHandler)}");
 
             int highestDuration = int.Parse(_configuration["ControlParameters:CheckBalance:HighestDuration"]);
             int lowestDuration = int.Parse(_configuration["ControlParameters:CheckBalance:LowestDuration"]);

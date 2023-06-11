@@ -9,14 +9,13 @@
     "ScenariosSettings": [
       {
         "ScenarioName": "LoadTestNServiceBus",
-        "WarmUpDuration": "00:00:05",
         "ReportFileName": "LoadTestReport",
         "ReportFolder": "./my_reports",
         "ReportFormats": [ "Html", "Md" ],
         "SendStatsInterval": "00:00:05",
 
         "LoadSimulationsSettings": [
-          { "Inject": [ 3, "00:00:05", "00:01:00"] }
+          { "Inject": [ 1 , "00:00:01", "00:01:00"] }
         ]
       }
     ]

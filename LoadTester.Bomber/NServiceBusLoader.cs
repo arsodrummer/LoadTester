@@ -33,12 +33,12 @@ namespace LoadTester
                     _logger.LogError("Failed to SendMessageAsync: ", ex);
                     return Response.Fail();
                 }
-            })
-            .WithLoadSimulations(
-                Simulation.Inject(rate: 10,
-                                  interval: TimeSpan.FromSeconds(1),
-                                  during: TimeSpan.FromSeconds(30))
-            );
+            });
+            //.WithLoadSimulations(
+            //    Simulation.Inject(rate: 10,
+            //                      interval: TimeSpan.FromSeconds(1),
+            //                      during: TimeSpan.FromSeconds(30))
+            //);
 
             NBomberRunner
                 .RegisterScenarios(scenario)

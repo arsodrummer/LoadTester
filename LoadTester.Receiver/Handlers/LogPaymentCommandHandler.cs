@@ -20,7 +20,7 @@ namespace Receiver.Handlers
 
         public async Task Handle(LogPaymentCommand message, IMessageHandlerContext context)
         {
-            _logger.LogInformation($"[{DateTime.Now}] Handling {nameof(LogPaymentCommand)}");
+            _logger.LogInformation($"[{DateTime.Now:HH:mm:ss}] Handling {nameof(LogPaymentCommand)}");
 
             int highestDuration = int.Parse(_configuration["ControlParameters:LogPayment:HighestDuration"]);
             int lowestDuration = int.Parse(_configuration["ControlParameters:LogPayment:LowestDuration"]);

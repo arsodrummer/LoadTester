@@ -20,7 +20,7 @@ namespace Receiver.Handlers
 
         public async Task Handle(ExecutePaymentCommand message, IMessageHandlerContext context)
         {
-            _logger.LogInformation($"[{DateTime.Now}] Handling {nameof(ExecutePaymentCommandHandler)}");
+            _logger.LogInformation($"[{DateTime.Now:HH:mm:ss}] Handling {nameof(ExecutePaymentCommandHandler)}");
 
             int highestDuration = int.Parse(_configuration["ControlParameters:ExecutePayment:HighestDuration"]);
             int lowestDuration = int.Parse(_configuration["ControlParameters:ExecutePayment:LowestDuration"]);
